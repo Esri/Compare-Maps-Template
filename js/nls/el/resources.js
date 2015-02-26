@@ -17,16 +17,16 @@
 define(
      ({
         map: {
-            error: "Nelze vytvořit mapu"
+            error: "Δεν είναι δυνατή η δημιουργία χάρτη"
         },
         tools: {
             info: {
-                label: "Informace",
-                tooltip: "Přepnout informace o mapě"
+                label: "Πληροφορίες",
+                tooltip: "Εναλλαγή πληροφοριών χάρτη"
             },
             sync: {
-                label: "Synchronizovat rozsah mapy",
-                tooltip: "Synchronizovat zobrazení na rozsah této mapy"
+                label: "Συγχρονισμός έκτασης χάρτη",
+                tooltip: "Συγχρονισμός με την έκταση αυτού του χάρτη"
             }
         }
     })

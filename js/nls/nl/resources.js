@@ -17,7 +17,7 @@
 define(
      ({
         map: {
-            error: "Kan map niet maken"
+            error: "Kan geen kaart creëren"
         },
         tools: {
             info: {

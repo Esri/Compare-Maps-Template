@@ -26,7 +26,7 @@ define(
             },
             sync: {
                 label: "Sinchronizuoti žemėlapio aprėptį",
-                tooltip: "Sinchronizuokite su šio žemėlapio aprėptimi"
+                tooltip: "Sinchronizuoti su šio žemėlapio aprėptimi"
             }
         }
     })

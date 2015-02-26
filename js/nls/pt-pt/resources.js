@@ -21,12 +21,12 @@ define(
         },
         tools: {
             info: {
-                label: "Informação",
-                tooltip: "Alternar informações do mapa"
+                label: "Informações",
+                tooltip: "Alternar informações de mapa"
             },
             sync: {
-                label: "Sincronizar extensão do mapa",
-                tooltip: "Sincronizar para a extensão do mapa atual"
+                label: "Sincronizar Extensão de Mapa",
+                tooltip: "Sincronizar a extensão deste mapa"
             }
         }
     })

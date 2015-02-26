@@ -2,7 +2,7 @@
 $panel-width = 250px;
 $font-color = #575757;
 $background-fallback-color = #bcb5b5;
-$title-background-color = rgba(188,181,181,0.14);
+$title-background-color = rgba(188,181,181,1);
 $font-size = 1.2em;
 html,body {
     height:100%;
@@ -29,6 +29,7 @@ body{
 }
 
 .panel_desc{
+    margin-top:3px;
     padding:4px;
 }
 
@@ -43,7 +44,12 @@ body{
   overflow-y:scroll;
 }
 .header_info{
-    padding: 15px 2px 10px 6px;
+    padding: 15px 6px 10px 6px;
+}
+.shadow{
+  border-right:solid 1px darken($background-fallback-color,5%);
+  border-bottom:solid 1px darken($background-fallback-color,5%);
+  box-sizing:border-box;
 }
 #expandoPane{
     background-color: #fff; 
@@ -60,8 +66,52 @@ body{
     /*Example of a rule that will be applied if the app is viewed in a browser with a RTL locale like Hebrew or Arabic.*/
 }
 .esriSimpleSlider{
-  top:10px;
+  top:35px;
   left:5px;
+}
+.mapInfo{
+  position: absolute;
+  right:2px;
+  top:2px;
+  font-size:1em !important;
+  cursor:pointer;
+  color:$font-color;
+}
+.article{
+}
+.mapInfoPanel{
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:30;
+  height:98%;
+  width:40%;
+  overflow:scroll;
+  border-radius:0 0 4px 4px;
+  background-color: transparent;
+  background-color:#fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 28px 1em 1em 1em;
+
+}
+.esriLegendServiceLabel{
+  display:none;
+}
+.mapTitle{
+  padding: 3px 2px 3px 2px;
+  z-index:40;
+  margin:auto;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  text-align:center;
+  font-size:1.2em;
+  line-height:1.2em;
+  color:$font-color;
 }
 .HomeButton {
   border-bottom: 1px solid #57585a;
@@ -69,7 +119,7 @@ body{
   height: 30px;
 }
 .HomeButton .home {
-  background: url("http://cdn.arcgis.com/cdn/5177/js/arcgisonline/map/css/images/home_locate.png") no-repeat 0 0;
+  background: url("../images/home_locate.png") no-repeat 0 0;
   width: 30px;
   height: 30px;
 }
@@ -145,7 +195,7 @@ body{
 }
 .icon-sync-container{
   position:relative;
-  top:110px;
+  top:135px;
   left:5px;
   width:30px;
   height:30px;
@@ -167,13 +217,15 @@ body{
     z-index: 40;
     color:lighten($font-color, 30);
     text-shadow:0px 0px 10px #fff;
-    font-size:1.2em;
+    font-size:1em;
+    line-height:1.2em;
 }
 .icon-sync:hover{
-  background-color: darken($title-background-color,10)
+    border-radius:4px;
+    line-height:1.2em;
+    background-color: #eee;
 }
 .icon-sync:active{
-  background-color: darken($title-background-color, 30);
 }
 .icon-info:before {
     content: "\e600";
@@ -194,14 +246,19 @@ body{
 :focus{
     outline:none;
 }
+
 .claro .dojoxExpandoClosed .dojoxExpandoTitleNode {
     display: block;
     padding-top:40px;
     white-space: nowrap;
     transform: rotate(90deg);
     transform-origin: 50% 84%;
+    overflow:visible;
+    text-overflow:normal;
 } 
+
 .claro .dojoxExpandoIcon{
+  z-index:500;
     cursor:pointer;
     font-family: 'icomoon';
     speak: none;
@@ -223,7 +280,9 @@ body{
 
 .dojoxExpandoPane {
     overflow: hidden;
+    width: $panel-width;    
     z-index: 440 !important;
+    border-right: solid 1px darken($background-fallback-color,5%);
 }
 
 .dojoxExpandoPane .dojoxExpandoWrapper {
@@ -239,9 +298,13 @@ body{
     overflow: hidden !important;
 }
 
-.dojoxExpandoTitleNode {
+
+.dojoxExpandoTitle{
+    cursor:pointer;
     padding-top:none;
-    white-space: normal;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
     padding-right: 6px;
     padding-left: 2px;
 }
@@ -262,9 +325,9 @@ body{
 }
 
 .dojoxExpandoIcon {
-    width: 28px;
+    width: 22px;
     cursor: pointer;
-    height: 28px;
+    height: 22px;
 }
 
 .dojoxExpandoClosed .dojoxExpandoIcon {
@@ -277,12 +340,10 @@ body{
 
 .claro .dojoxExpandoTitle {
     color:$font-color;
-    font-size:$font-size;
-    padding: 5px 5px 5px 5px;
-    min-height: 18px;
+    font-size:1.2em;
+    padding: 3px 2px 3px 2px;
+    line-height:1.2em;
     font-weight: 600;
-    background-color: $background-fallback-color;
-    background-color: $title-background-color;
 }
 
 .claro .dojoxExpandoClosed .dojoxExpandoTitle {
@@ -290,8 +351,6 @@ body{
     border: none;
     padding: 3px;
     height:100%;
-    background-color: $background-fallback-color;
-    background-color: $title-background-color;
 }
 .dojoxExpandoClosed .dojoxExpandoIcon {
     /*margin-right: 4px;*/
@@ -388,8 +447,10 @@ body{
 
     }
 }
-
-/*accordion container styles */
+.dojoxExpandoContent{
+  overflow:auto !important;
+  background-color:#fff;
+}
 .truncate{
     padding-left:2px;
     display:inline-block;
@@ -398,80 +459,6 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.ac-container{
-    width:$panel-width;
-    height:85%;
-    overflow-y:auto;
-    overflow-x:hidden;
-}
-.ac-container label {
-  width:100%;
-  padding-top:2px;
-  padding-right:10px;
-  padding-bottom:2px;
-  padding-left:2px;
-  position: relative;
-  z-index: 20;
-  display: block;
-  height: 30px;
-  cursor: pointer;
-  color: $font-color;
-  line-height: 33px;
-  font-size: .9em;
-  font-weight: bold;
-  background-color: $background-fallback-color;
-  background-color: $title-background-color;
-  zoom: 1; 
-}
-
-.ac-container label:hover {
-  background-color: darken($background-fallback-color, 20);
-  background-color: darken($title-background-color, 20);
-  zoom: 1; }
-
-
-.ac-container .arrow:after, .ac-container input:checked + .arrow:after {
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: bold;
-  content: '\e603';
-  /*down arrow*/
-  position: absolute;
-  right: 15px;
-  cursor: pointer; }
-
-.ac-container input:checked + .arrow:after {
-  content: '\e604';
-  /*up arrow*/
-  cursor: pointer; }
-
-.ac-container input {
-  display: none; }
-
-.ac-container .article {
-  background-color: transparent;
-  background-color: rgba(255, 255, 255, 0.5);
-  zoom: 1;
-  margin-top: -1px;
-  overflow: hidden;
-  height: 0;
-  position: relative;
-  z-index: 10;
-  transition: height 0.3s ease-in-out;
-  transition: box-shadow 0.6s linear;
-
-}
-
-.ac-container input:checked ~ div.ac-medium, .ac-container input:checked ~ div.ac-large {
-    transition: height 0.5s ease-in-out;
-    transition: box-shadow 0.1s linear;
-}
-
-.ac-container input:checked ~ div.ac-medium {
-  height: 20%; }
-
-.ac-container input:checked ~ div.ac-large {
-  height: 80%; }
 
 .hidden {
   display: none; }

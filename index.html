@@ -12,8 +12,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <!-- End Responsive -->
     <!-- Use protocol relative urls that way if the browser is viewing the page via HTTPS the js/css file will be requested using the HTTPS protocol -->
-    <link rel="stylesheet" href="//js.arcgis.com/3.12//dijit/themes/claro/claro.css">
-    <link rel="stylesheet"  href="//js.arcgis.com/3.12/esri/css/esri.css">
+    <link rel="stylesheet" href="//js.arcgis.com/3.13//dijit/themes/claro/claro.css">
+    <link rel="stylesheet"  href="//js.arcgis.com/3.13/esri/css/esri.css">
     <!-- Load any application specific styles -->
     <link rel="stylesheet" href="css/main.css">
     <!--[if IE 8]>
@@ -22,10 +22,6 @@
 </head>
 <body class="claro app-loading">
     <div id="bc" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'sidebar', gutters:false">
-        <div id="expandoPane" data-dojo-type="dojox/layout/ExpandoPane" class="bg" data-dojo-props="region:'left'">
-            <div id="headerContent"></div>
-            <div id="ac-container" class="ac-container"></div>
-        </div>
         <div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
             <div id="container" class="container">
                 <div class="loading-indicator">
@@ -53,16 +49,14 @@
             }]
         };
     </script>
-    <script type="text/javascript" src="//js.arcgis.com/3.12/"></script>
+    <script type="text/javascript" src="//js.arcgis.com/3.13/"></script>
     <script type="text/javascript">
         require([
-            "application/templateOptions",
+            "config/templateConfig",
             "application/template",
             "application/main",
             "dijit/layout/BorderContainer",
-            "dojox/layout/ExpandoPane",
-            "dijit/layout/ContentPane",
-            "dijit/layout/AccordionContainer"
+            "dijit/layout/ContentPane"
         ], function(
             templateConfig,
             Template,

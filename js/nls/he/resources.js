@@ -22,7 +22,7 @@ define(
         tools: {
             info: {
                 label: "מידע",
-                tooltip: "החלף מידע מפה"
+                tooltip: "שנה מצב מידע במפה"
             },
             sync: {
                 label: "סנכרן תיחום מפה",

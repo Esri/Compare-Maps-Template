@@ -21,7 +21,7 @@ define(
         },
         tools: {
             info: {
-                label: "Info",
+                label: "Teave",
                 tooltip: "Kuvage kaardi info"
             },
             sync: {
