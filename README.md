@@ -2,7 +2,7 @@ compare-maps-template
 =====================
 *Compare Maps*  is a configurable application template used to compare multiple web maps.
 
-[View it live] (http://www.arcgis.com/apps/Compare/index.html)
+[View it live] (http://www.arcgis.com/apps/CompareMaps/index.html)
 
 #Features
 
