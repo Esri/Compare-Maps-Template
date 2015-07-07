@@ -4,6 +4,10 @@ compare-maps-template
 
 [View it live] (http://www.arcgis.com/apps/CompareAnalysis/index.html?appid=37e076cb5893405fbd09d774f350fae2)
 
+#July 2015 Release Updates
+- **Auto Sync:**  Automatically sync maps to the first map. Disable this behavior by setting auto_sync to false in config/defaults.js 
+- **Search:** Add a search box to each map by setting search to true in config/defaults.js
+
 #Features
 
 - Compare multiple web maps side by side.
