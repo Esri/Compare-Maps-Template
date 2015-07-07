@@ -1,12 +1,35 @@
 {
     "configurationSettings": [
         {
-            "category": "<b>Map Settings</b>",
+            "category": "<b>App Settings</b>",
             "fields": [
+                {
+                "type": "appproxies"
+                },
                 {
                     "type": "webmap",
                     "selection": "multiple"
+                },{
+                    "type":"boolean",
+                    "fieldName": "auto_sync",
+                    "label": "Auto sync maps",
+                    "tooltip": "When true maps will be synced to the extent of the first map."
                 }
+            ]
+        },{
+            "category": "Search Settings",
+            "fields":[
+                {
+                    "type": "boolean",
+                    "fieldName": "search",
+                    "label": "Place search",
+                    "tooltip": "Add location search tool"
+                },{
+                    "type":"boolean",
+                    "fieldName": "searchExtent",
+                    "label": "Display search results in current extent"
+                }
+
             ]
         },
         {
@@ -77,6 +100,9 @@
         "theme_color": "#575757",
         "theme_bg_color": "#fff",
         "openPanelOnLoad": true,
-        "showTitleAndDescription": true
+        "showTitleAndDescription": true,
+        "auto_sync": true,
+        "search": false,
+        "searchExtent": true
     }
 }
