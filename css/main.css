@@ -95,7 +95,7 @@ body {
 }
 .mapTitle {
   width: 100%;
-  padding: 3px 2px 3px 2px;
+  padding: 2px 2px 0 2px;
   z-index: 40;
   margin: auto;
   position: absolute;
@@ -266,6 +266,11 @@ body {
   overflow: visible;
   -o-text-overflow: normal;
   text-overflow: normal;
+}
+.esriRTL .claro .dojoxExpandoClosed .dojoxExpandoTitleNode {
+  padding-top:0 !important;
+  margin-top:170px !important;
+  transform-origin: 39% 84% !important;
 }
 .claro .dojoxExpandoIcon {
   z-index: 500;
