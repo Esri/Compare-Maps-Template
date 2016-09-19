@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Kan ikke oprette kort"
-        },
-        tools: {
-            info: {
-                label: "Oplysninger",
-                tooltip: "Skift kortinfo"
-            },
-            sync: {
-                label: "Synkronisér kortudstrækning",
-                tooltip: "Synkronisér til udstrækningen af dette kort"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Kan ikke oprette kort"
+  },
+  "tools": {
+    "info": {
+      "label": "Oplysninger",
+      "tooltip": "Skift kortinfo"
+    },
+    "sync": {
+      "label": "Synkronisér kortudstrækning",
+      "tooltip": "Synkronisér til udstrækningen af dette kort"
+    }
+  }
+});

@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "ไม่สามารถสร้างแผนที่ได้"
-        },
-        tools: {
-            info: {
-                label: "ข้อมูล",
-                tooltip: "สลับกับข้อมูลแผนที่"
-            },
-            sync: {
-                label: "ซิงค์ขอบเขตแผนที่",
-                tooltip: "ซิงค์กับขอบเขตของแผนที่"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "ไม่สามารถสร้างแผนที่ได้"
+  },
+  "tools": {
+    "info": {
+      "label": "ข้อมูล",
+      "tooltip": "สลับกับข้อมูลแผนที่"
+    },
+    "sync": {
+      "label": "ซิงค์ขอบเขตแผนที่",
+      "tooltip": "ซิงค์กับขอบเขตของแผนที่"
+    }
+  }
+});

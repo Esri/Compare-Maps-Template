@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Δεν είναι δυνατή η δημιουργία χάρτη"
-        },
-        tools: {
-            info: {
-                label: "Πληροφορίες",
-                tooltip: "Εναλλαγή πληροφοριών χάρτη"
-            },
-            sync: {
-                label: "Συγχρονισμός έκτασης χάρτη",
-                tooltip: "Συγχρονισμός με την έκταση αυτού του χάρτη"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Δεν είναι δυνατή η δημιουργία χάρτη"
+  },
+  "tools": {
+    "info": {
+      "label": "Πληροφορίες",
+      "tooltip": "Εναλλαγή πληροφοριών χάρτη"
+    },
+    "sync": {
+      "label": "Συγχρονισμός έκτασης χάρτη",
+      "tooltip": "Συγχρονισμός με την έκταση αυτού του χάρτη"
+    }
+  }
+});

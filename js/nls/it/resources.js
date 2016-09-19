@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Impossibile creare la mappa"
-        },
-        tools: {
-            info: {
-                label: "Informazioni",
-                tooltip: "Attiva/disattiva informazioni mappa"
-            },
-            sync: {
-                label: "Sincronizza estensione mappa",
-                tooltip: "Sincronizza in base all\'estensione di questa mappa"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Impossibile creare la mappa"
+  },
+  "tools": {
+    "info": {
+      "label": "Informazioni",
+      "tooltip": "Attiva/disattiva informazioni mappa"
+    },
+    "sync": {
+      "label": "Sincronizza estensione mappa",
+      "tooltip": "Sincronizza in base all'estensione di questa mappa"
+    }
+  }
+});

@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Kan geen kaart creëren"
-        },
-        tools: {
-            info: {
-                label: "Info",
-                tooltip: "Kaartinfo wisselen"
-            },
-            sync: {
-                label: "Extent van de kaart",
-                tooltip: "Het extent van de kaart synchroniseren"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Kan geen kaart creëren"
+  },
+  "tools": {
+    "info": {
+      "label": "Info",
+      "tooltip": "Kaartinfo wisselen"
+    },
+    "sync": {
+      "label": "Extent van de kaart",
+      "tooltip": "Het extent van de kaart synchroniseren"
+    }
+  }
+});

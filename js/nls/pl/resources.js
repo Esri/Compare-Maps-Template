@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Nie można utworzyć mapy"
-        },
-        tools: {
-            info: {
-                label: "Informacje",
-                tooltip: "Przełącz informacje o mapie"
-            },
-            sync: {
-                label: "Synchronizuj zasięg mapy",
-                tooltip: "Synchronizuj do zasięgu tej mapy"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Nie można utworzyć mapy"
+  },
+  "tools": {
+    "info": {
+      "label": "Informacje",
+      "tooltip": "Przełącz informacje o mapie"
+    },
+    "sync": {
+      "label": "Synchronizuj zasięg mapy",
+      "tooltip": "Synchronizuj do zasięgu tej mapy"
+    }
+  }
+});

@@ -16,16 +16,16 @@
  */
 define({
   "map": {
-    "error": "No se puede crear el mapa"
+    "error": "Nije moguće stvoriti kartu"
   },
   "tools": {
     "info": {
-      "label": "Información",
-      "tooltip": "Alternar información del mapa"
+      "label": "Informacije",
+      "tooltip": "Preklopi informacije o karti"
     },
     "sync": {
-      "label": "Sincronizar extensión del mapa",
-      "tooltip": "Sincroniza a la extensión de este mapa"
+      "label": "Sinkroniziraj obuhvat karte",
+      "tooltip": "Sinkroniziraj na obuhvat ove karte"
     }
   }
 });

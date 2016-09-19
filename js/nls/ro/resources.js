@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Nu se poate crea harta"
-        },
-        tools: {
-            info: {
-                label: "Informaţii",
-                tooltip: "Comutare informaţii hartă"
-            },
-            sync: {
-                label: "Sincronizare extindere hartă",
-                tooltip: "Sincronizare la extinderea acestei hărţi"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Nu se poate crea harta"
+  },
+  "tools": {
+    "info": {
+      "label": "Informaţii",
+      "tooltip": "Comutare informaţii hartă"
+    },
+    "sync": {
+      "label": "Sincronizare extindere hartă",
+      "tooltip": "Sincronizare la extinderea acestei hărţi"
+    }
+  }
+});

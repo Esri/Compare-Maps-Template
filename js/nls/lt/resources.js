@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Žemėlapio sukurti nepavyko"
-        },
-        tools: {
-            info: {
-                label: "Informacija",
-                tooltip: "Perjungti žemėlapio informaciją"
-            },
-            sync: {
-                label: "Sinchronizuoti žemėlapio aprėptį",
-                tooltip: "Sinchronizuoti su šio žemėlapio aprėptimi"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Žemėlapio sukurti nepavyko"
+  },
+  "tools": {
+    "info": {
+      "label": "Informacija",
+      "tooltip": "Perjungti žemėlapio informaciją"
+    },
+    "sync": {
+      "label": "Sinchronizuoti žemėlapio aprėptį",
+      "tooltip": "Sinchronizuoti su šio žemėlapio aprėptimi"
+    }
+  }
+});

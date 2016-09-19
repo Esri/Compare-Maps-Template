@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Не удалось создать карту"
-        },
-        tools: {
-            info: {
-                label: "Информация",
-                tooltip: "Переключить информацию о карте"
-            },
-            sync: {
-                label: "Синхронизовать экстент карты",
-                tooltip: "Синхронизовать с экстентом этой карты"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Не удалось создать карту"
+  },
+  "tools": {
+    "info": {
+      "label": "Информация",
+      "tooltip": "Переключить информацию о карте"
+    },
+    "sync": {
+      "label": "Синхронизовать экстент карты",
+      "tooltip": "Синхронизовать с экстентом этой карты"
+    }
+  }
+});

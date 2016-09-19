@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Det gick inte att skapa kartan"
-        },
-        tools: {
-            info: {
-                label: "Info",
-                tooltip: "Växla kartinfo"
-            },
-            sync: {
-                label: "Synkronisera kartutbredning",
-                tooltip: "Synkronisera till kartans utbredning"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Det gick inte att skapa kartan"
+  },
+  "tools": {
+    "info": {
+      "label": "Info",
+      "tooltip": "Växla kartinfo"
+    },
+    "sync": {
+      "label": "Synkronisera kartutbredning",
+      "tooltip": "Synkronisera till kartans utbredning"
+    }
+  }
+});

@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "לא ניתן ליצור מפה"
-        },
-        tools: {
-            info: {
-                label: "מידע",
-                tooltip: "שנה מצב מידע במפה"
-            },
-            sync: {
-                label: "סנכרן תיחום מפה",
-                tooltip: "סנכרן עם תיחום מפה זו"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "לא ניתן ליצור מפה"
+  },
+  "tools": {
+    "info": {
+      "label": "מידע",
+      "tooltip": "שנה מצב מידע במפה"
+    },
+    "sync": {
+      "label": "סנכרן תיחום מפה",
+      "tooltip": "סנכרן עם תיחום מפה זו"
+    }
+  }
+});

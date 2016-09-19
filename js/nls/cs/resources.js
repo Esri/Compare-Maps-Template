@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Nelze vytvořit mapu"
-        },
-        tools: {
-            info: {
-                label: "Informace",
-                tooltip: "Přepnout informace o mapě"
-            },
-            sync: {
-                label: "Synchronizovat rozsah mapy",
-                tooltip: "Synchronizovat zobrazení na rozsah této mapy"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Nelze vytvořit mapu"
+  },
+  "tools": {
+    "info": {
+      "label": "Informace",
+      "tooltip": "Přepnout informace o mapě"
+    },
+    "sync": {
+      "label": "Synchronizovat rozsah mapy",
+      "tooltip": "Synchronizovat zobrazení na rozsah této mapy"
+    }
+  }
+});

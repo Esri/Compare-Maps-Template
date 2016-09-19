@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Harita oluşturulamıyor"
-        },
-        tools: {
-            info: {
-                label: "Bilgi",
-                tooltip: "Harita bilgisini aç"
-            },
-            sync: {
-                label: "Harita Yayılımını Eşitle",
-                tooltip: "Bu haritanın yayılımına eşitle"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Harita oluşturulamıyor"
+  },
+  "tools": {
+    "info": {
+      "label": "Bilgi",
+      "tooltip": "Harita bilgisini aç"
+    },
+    "sync": {
+      "label": "Harita Yayılımını Eşitle",
+      "tooltip": "Bu haritanın yayılımına eşitle"
+    }
+  }
+});

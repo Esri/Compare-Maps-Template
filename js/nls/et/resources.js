@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Kaarti ei saa luua"
-        },
-        tools: {
-            info: {
-                label: "Teave",
-                tooltip: "Kuvage kaardi info"
-            },
-            sync: {
-                label: "Sünkroniseeri kaardi ulatus",
-                tooltip: "Sünkroniseeri selle kaardi kuvaulatus"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Kaarti ei saa luua"
+  },
+  "tools": {
+    "info": {
+      "label": "Teave",
+      "tooltip": "Kuvage kaardi info"
+    },
+    "sync": {
+      "label": "Sünkroniseeri kaardi ulatus",
+      "tooltip": "Sünkroniseeri selle kaardi kuvaulatus"
+    }
+  }
+});

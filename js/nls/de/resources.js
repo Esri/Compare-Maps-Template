@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Karte kann nicht erstellt werden"
-        },
-        tools: {
-            info: {
-                label: "Info",
-                tooltip: "Karteninfo ein/-ausblenden"
-            },
-            sync: {
-                label: "Kartenausdehnung synchronisieren",
-                tooltip: "Auf die Ausdehnung dieser Karte synchronisieren"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Karte kann nicht erstellt werden"
+  },
+  "tools": {
+    "info": {
+      "label": "Info",
+      "tooltip": "Karteninfo ein/-ausblenden"
+    },
+    "sync": {
+      "label": "Kartenausdehnung synchronisieren",
+      "tooltip": "Auf die Ausdehnung dieser Karte synchronisieren"
+    }
+  }
+});

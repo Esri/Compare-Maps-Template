@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Impossible de créer la carte"
-        },
-        tools: {
-            info: {
-                label: "Informations",
-                tooltip: "Activer/désactiver les informations cartographiques"
-            },
-            sync: {
-                label: "Synchroniser l'étendue de la carte",
-                tooltip: "Synchroniser sur l'étendue de cette carte"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Impossible de créer la carte"
+  },
+  "tools": {
+    "info": {
+      "label": "Informations",
+      "tooltip": "Activer/désactiver les informations cartographiques"
+    },
+    "sync": {
+      "label": "Synchroniser l'étendue de la carte",
+      "tooltip": "Synchroniser sur l'étendue de cette carte"
+    }
+  }
+});

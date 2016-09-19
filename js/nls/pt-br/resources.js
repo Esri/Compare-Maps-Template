@@ -14,20 +14,18 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(
-     ({
-        map: {
-            error: "Não foi possível criar o mapa"
-        },
-        tools: {
-            info: {
-                label: "Info",
-                tooltip: "Alternar info do mapa"
-            },
-            sync: {
-                label: "Sincronizar Extensão do Mapa",
-                tooltip: "Sincronizar para extensão deste mapa"
-            }
-        }
-    })
-);
+define({
+  "map": {
+    "error": "Não foi possível criar o mapa"
+  },
+  "tools": {
+    "info": {
+      "label": "Info",
+      "tooltip": "Alternar info do mapa"
+    },
+    "sync": {
+      "label": "Sincronizar Extensão do Mapa",
+      "tooltip": "Sincronizar para extensão deste mapa"
+    }
+  }
+});
