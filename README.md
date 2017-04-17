@@ -2,7 +2,7 @@ compare-maps-template
 =====================
 *Compare Maps*  is a configurable application template used to compare multiple web maps.
 
-[View it live](http://www.arcgis.com/apps/CompareAnalysis/index.html?appid=37e076cb5893405fbd09d774f350fae2)
+[View it live](http://www.arcgis.com/apps/CompareAnalysis/index.html?appid=e61e06a5bf7b48c18e88deb1422b0a59)
 
 # July 2015 Release Updates
 - **Auto Sync:**  Automatically sync maps to the first map. Disable this behavior by setting auto_sync to false in config/defaults.js 
