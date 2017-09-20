@@ -16,16 +16,16 @@
  */
 define({
   "map": {
-    "error": "Nije moguće stvoriti kartu"
+    "error": "Tidak dapat membuat peta"
   },
   "tools": {
     "info": {
-      "label": "Informacije",
-      "tooltip": "Uključi/isključi informacije o karti"
+      "label": "Info",
+      "tooltip": "Munculkan info peta"
     },
     "sync": {
-      "label": "Sinkroniziraj obuhvat karte",
-      "tooltip": "Sinkroniziraj na obuhvat ove karte"
+      "label": "Selaraskan Jangkauan Peta",
+      "tooltip": "Selaraskan dengan jangkauan peta ini"
     }
   }
 });

@@ -16,16 +16,16 @@
  */
 define({
   "map": {
-    "error": "Nije moguće stvoriti kartu"
+    "error": "मानचित्र बनाने में अक्षम"
   },
   "tools": {
     "info": {
-      "label": "Informacije",
-      "tooltip": "Uključi/isključi informacije o karti"
+      "label": "जानकारी",
+      "tooltip": "मानचित्र की जानकारी टॉगल करें"
     },
     "sync": {
-      "label": "Sinkroniziraj obuhvat karte",
-      "tooltip": "Sinkroniziraj na obuhvat ove karte"
+      "label": "मानचित्र की सीमा को सिंक करें",
+      "tooltip": "इस मानचित्र की सीमा तक सिंक करें"
     }
   }
 });

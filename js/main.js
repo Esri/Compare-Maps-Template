@@ -15,13 +15,13 @@
  | See the License for the specific language governing permissions and
  | limitations under the License.
  */
-define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/parser", "dojo/has", "dojo/query", "dijit/registry", "dojo/window", "dojo/promise/all", "dojo/_base/lang", "esri/arcgis/utils", "dojo/dom", "dojo/dom-attr", "dojo/dom-construct", "dojo/dom-style", "dojo/dom-class", "dojo/on", "esri/dijit/Legend", "esri/layers/FeatureLayer", "esri/dijit/Search", "esri/tasks/locator", "dojo/_base/array", "esri/dijit/HomeButton", "esri/lang", "dijit/layout/ContentPane", "application/SearchSources", "dojox/layout/ExpandoPane", "dojo/domReady!"], function(
+define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/parser", "dojo/has", "dojo/query", "dijit/registry", "dojo/window", "dojo/promise/all", "dojo/_base/lang", "esri/arcgis/utils", "dojo/dom", "dojo/dom-attr", "dojo/dom-construct", "dojo/dom-style", "dojo/dom-class", "dojo/on", "esri/dijit/Legend", "esri/layers/FeatureLayer", "esri/dijit/Search", "esri/tasks/locator", "dojo/_base/array", "esri/dijit/HomeButton", "esri/lang", "dijit/layout/ContentPane", "application/SearchSources", "dojox/layout/ExpandoPane", "dojo/domReady!"], function (
   declare, Color, kernel, parser, has, query, registry, win, all, lang, arcgisUtils, dom, domAttr, domConstruct, domStyle, domClass, on, Legend, FeatureLayer, Search, Locator, array, HomeButton, esriLang, ContentPane, SearchSources, ExpandoPane) {
   return declare(null, {
     config: {},
     mapInfo: [],
     handler: null,
-    startup: function(config) {
+    startup: function (config) {
       document.documentElement.lang = kernel.locale;
       parser.parse();
       if (config) {
@@ -51,10 +51,10 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
           var bc = registry.byId("bc");
           bc.addChild(pane);
 
-          query(".dojoxExpandoIcon").on("click", function() {
+          query(".dojoxExpandoIcon").on("click", function () {
             pane.toggle();
           });
-          query(".dojoxExpandoTitle").on("click", function() {
+          query(".dojoxExpandoTitle").on("click", function () {
             pane.toggle();
           });
           if (!this.config.openPanelOnLoad) {
@@ -70,7 +70,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
       }
       on(window, "resize", lang.hitch(this, this._resizeMap));
     },
-    reportError: function(error) {
+    reportError: function (error) {
       // remove loading class from body
       domClass.remove(document.body, "app-loading");
       domClass.add(document.body, "app-error");
@@ -84,7 +84,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
         }
       }
     },
-    _createGrid: function() {
+    _createGrid: function () {
       var row = null,
         promiseList = [],
         cell = null;
@@ -123,7 +123,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
       }
 
 
-      all(promiseList).then(lang.hitch(this, function(results) {
+      all(promiseList).then(lang.hitch(this, function (results) {
         for (i = 0; i < results.length; i++) {
           if (results[i] && results[i].map) {
             var result = results[i];
@@ -156,7 +156,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
             result.itemInfo.item.legendId = "legend_" + result.map.id;
             this._createInfoContent(result.itemInfo.item, result);
 
-            on(map_info, "click", lang.hitch(this, function(item) {
+            on(map_info, "click", lang.hitch(this, function (item) {
               if (item.target && item.target.id) {
                 var panel_id = "panel" + item.target.id;
                 var panel = dom.byId(panel_id);
@@ -213,7 +213,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
 
         //Auto sync maps if configured to do so
         if (this.config.auto_sync) {
-          query("#sync_0").some(lang.hitch(this, function(node) {
+          query("#sync_0").some(lang.hitch(this, function (node) {
             node.click();
             return true;
           }));
@@ -226,7 +226,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
       }));
 
     },
-    _createCell: function(count, cols, row, i) {
+    _createCell: function (count, cols, row, i) {
       //Create a cell for each map and size to fit the number of rows
       var cell = domConstruct.create("div", {
         "class": "col span_" + count + "_of_" + cols + " shadow",
@@ -235,20 +235,20 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
       }, row);
       return cell;
     },
-    _createRow: function() {
+    _createRow: function () {
       var row = domConstruct.create("div", {
         "class": "section group",
       }, "container");
       return row;
     },
-    _syncMaps: function(extent_map, evt) {
+    _syncMaps: function (extent_map, evt) {
       if (this.handler) {
         this.handler.remove();
       }
 
       //remove selected class from all icons then add to current one
       var sel = domClass.contains(evt.target, "icon-selected");
-      query(".icon-sync").forEach(function(node) {
+      query(".icon-sync").forEach(function (node) {
         domClass.remove(node, "icon-selected");
       });
 
@@ -267,7 +267,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
           map.setExtent(extent_map.extent);
         }
       }
-      this.handler = on(extent_map, "extent-change", lang.hitch(this, function() {
+      this.handler = on(extent_map, "extent-change", lang.hitch(this, function () {
         for (var i = 0; i < this.mapInfo.length; i++) {
           var map = this.mapInfo[i].map;
           if (map.id !== extent_map.id) {
@@ -277,20 +277,22 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
 
       }));
     },
-    setColor: function(value) {
-      var colorValue = null;
-      var rgb = Color.fromHex(value).toRgb();
-
-      if (has("ie") == 8) {
-        colorValue = value;
+    setColor: function (value) {
+      var colorValue = null, rgb;
+      if (!value) {
+        colorValue = new Color("transparent");
       } else {
-        rgb.push(0.9);
-        colorValue = Color.fromArray(rgb);
+        rgb = Color.fromHex(value).toRgb();
+        if (has("ie") == 8) {
+          colorValue = value;
+        } else {
+          rgb.push(0.9);
+          colorValue = Color.fromArray(rgb);
+        }
       }
       return colorValue;
-
     },
-    _updateTheme: function() {
+    _updateTheme: function () {
       if (this.config.sharedThemeConfig && this.config.sharedThemeConfig.attributes && this.config.sharedThemeConfig.attributes.theme) {
         var sharedTheme = this.config.sharedThemeConfig.attributes;
         this.config.theme_color = sharedTheme.theme.text.color;
@@ -299,14 +301,20 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
 
       var bgcolor = this.setColor(this.config.theme_bg_color);
       var color = this.setColor(this.config.theme_color);
+      var bodyColor = this.setColor(this.config.bodyColor);
+      var bodyBg = this.config.bodyBg;
 
+      query(".dojoxExpandoContent").forEach(function (node) {
+        domStyle.set(node, "background-color", bodyBg);
+        domStyle.set(node, "color", bodyColor);
+      });
 
       query(".bg").style("backgroundColor", bgcolor.toString());
       query(".fg").style("color", color.toString()); //icon color
       query(".dojoxExpandoIcon").style("color", color.toString()); //hamburger menu
       query(".dojoxExpandoTitleNode").style("color", color.toString()); //title
     },
-    _createInfoContent: function(details, layer) {
+    _createInfoContent: function (details, layer) {
 
       //don't create if we don't have a legend or details
       var legendLayers = arcgisUtils.getLegendLayers(layer);
@@ -339,7 +347,7 @@ define(["dojo/_base/declare", "dojo/_base/Color", "dojo/_base/kernel", "dojo/par
       }
 
     },
-    _resizeMap: function() {
+    _resizeMap: function () {
       if (this.mapInfo && this.mapInfo.length === 0) {
         return;
       }
