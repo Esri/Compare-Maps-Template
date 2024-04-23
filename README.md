@@ -1,4 +1,6 @@
-compare-maps-template
+
+ArcGIS Configurable Apps will be retired in 2025. The ArcGIS Configurable Apps source code repro is deprecated and will not receive further updates. In addition, this repository will be removed in October 2025, along with the October 2025 ArcGIS Online update.
+Deprecated: compare-maps-template
 =====================
 *Compare Maps*  is a configurable application template used to compare multiple web maps.
 
